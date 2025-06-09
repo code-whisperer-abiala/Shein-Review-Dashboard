@@ -22,7 +22,7 @@ with col1:
     st.image("shein_logo.png", width=100) # Adjust width as needed for inline placement
 
 with col2:
-    st.markdown("## Shein App Review Dashboard")
+    st.markdown("## Shein App Review Dashboard by Grace Isiaka")
 
 st.markdown("Explore customer sentiment, delivery issues, and product perceptions via real user reviews.")
 
@@ -214,6 +214,8 @@ st.markdown("---")
 st.markdown(
     """
     <div style="font-size: 0.8em; color: grey; text-align: center;">
+    Dashboard by <strong>Grace Isiaka</strong>
+    <br>
     Shein logo icon used with thanks to  <a href="https://icons8.com/icon/V3r2kWDPwZgQ/shein" target="_blank" style="color: grey; text-decoration: none;">Icons8 under free license.</a>
     </div>
     """,
