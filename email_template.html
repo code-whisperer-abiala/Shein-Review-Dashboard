@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Shein Review Sentiment Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .alert {
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .alert-red {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .alert-orange {
+            background-color: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeeba;
+        }
+        .alert-green {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Shein Review Sentiment Report</h1>
+        <p><strong>Date:</strong> {{ current_date }}</p>
+        <p><strong>Data Source:</strong> {{ data_source }}</p>
+        <p><strong>Total reviews analyzed:</strong> {{ total_reviews }}</p>
+
+        {% if alerts %}
+            <h2>Alerts</h2>
+            {% for alert in alerts %}
+                <div class="alert {{ alert.type }}">
+                    {{ alert.message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        <h2>Overall Sentiment Distribution (% of Total)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sentiment</th>
+                    <th>Percentage</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for sentiment, percentage in overall_sentiment_dist.items() %}
+                    <tr>
+                        <td>{{ sentiment }}</td>
+                        <td>{{ "%.2f"|format(percentage) }}%</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h2>Sentiment Count by Theme</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Theme</th>
+                    {% for col in sentiment_by_theme_cols %}
+                        <th>{{ col }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for theme, counts in sentiment_by_theme.items() %}
+                    <tr>
+                        <td>{{ theme }}</td>
+                        {% for col in sentiment_by_theme_cols %}
+                            <td>{{ counts[col] }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <p class="footer">
+            This report was generated automatically by the Shein Sentiment Notifier.
+        </p>
+    </div>
+</body>
+</html>

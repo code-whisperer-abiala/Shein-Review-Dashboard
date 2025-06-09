@@ -1,0 +1,7 @@
+[theme]
+base="light"
+primaryColor="#3b82f6"                # Blue (chart-aligned, same family as your current blues)
+backgroundColor="#f8fafc"             # Softest gray-white background
+secondaryBackgroundColor="#e5e7eb"    # Light gray for sidebar/panels (neutral but visible)
+textColor="#1e293b"                   # Dark slate (slightly softer than black)
+font="sans serif"
