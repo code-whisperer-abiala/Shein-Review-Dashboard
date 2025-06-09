@@ -1,4 +1,4 @@
-# 💬 Shein App Review Sentiment Dashboard
+#  Shein App Review Sentiment Dashboard
 
 **Turning Raw Feedback into Actionable Insights for Product Teams**
 
@@ -21,31 +21,31 @@ By combining NLP, clustering, automation, and dashboarding, it enables product t
 
 ## 🔍 Key Features
 
-* 📅 **Automated Review Collection**
+*  **Automated Review Collection**
   Scrapes the latest Shein app reviews using `google_play_scraper`.
 
-* 🧹 **Text Cleaning & Filtering**
+*  **Text Cleaning & Filtering**
   Deduplicates and filters non-English content with `langdetect`.
 
-* 🧠 **Sentiment Classification**
+*  **Sentiment Classification**
   Uses Hugging Face’s `twitter-roberta-base-sentiment-latest` model.
 
-* 🧩 **Thematic Clustering**
+*  **Thematic Clustering**
   Groups semantically similar reviews into 3 key themes using K-Means:
 
   * Delivery & Orders
   * App Performance
   * Product Quality
 
-* 📊 **Streamlit Dashboard**
+*  **Streamlit Dashboard**
   Interactive filters, trend visualizations, and export functionality.
 
-* 🔔 **Email Spike Alerts**
+*  **Email Spike Alerts**
   Detects negative sentiment surges and sends automated alerts with a summary + CSV attachment.
 
 ---
 
-## 🧱 Tech Stack
+##  Tech Stack
 
 | Category   | Tools                                                                                   |
 | ---------- | --------------------------------------------------------------------------------------- |
@@ -58,7 +58,7 @@ By combining NLP, clustering, automation, and dashboarding, it enables product t
 
 ---
 
-## 🛠️ Run Locally
+##  Run Locally
 
 ### Prerequisites
 
