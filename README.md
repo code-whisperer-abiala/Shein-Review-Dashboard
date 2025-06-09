@@ -4,7 +4,7 @@
 
 ---
 
-## 📌 Overview
+##  Overview
 
 This project delivers a full-stack data analytics solution that transforms thousands of user reviews from the **Shein mobile app** into actionable business intelligence.
 
@@ -12,9 +12,9 @@ By combining NLP, clustering, automation, and dashboarding, it enables product t
 
 ---
 
-## 🚀 Live Demo
+##  Live Demo
 
-▶️ **[Try the Interactive Dashboard](YOUR_STREAMLIT_APP_URL)**
+▶️ **[Try the Interactive Dashboard](https://maincusersisiakonedrivedocumentsprojectssheindashboardproject.streamlit.app/)**
 *(No login required – view trends, filter by theme or sentiment, and export data.)*
 
 ---
@@ -31,7 +31,7 @@ By combining NLP, clustering, automation, and dashboarding, it enables product t
   Uses Hugging Face’s `twitter-roberta-base-sentiment-latest` model.
 
 * 🧩 **Thematic Clustering**
-  Groups semantically similar reviews into 3 key themes using KMeans:
+  Groups semantically similar reviews into 3 key themes using K-Means:
 
   * Delivery & Orders
   * App Performance
@@ -41,7 +41,7 @@ By combining NLP, clustering, automation, and dashboarding, it enables product t
   Interactive filters, trend visualizations, and export functionality.
 
 * 🔔 **Email Spike Alerts**
-  Detects negative sentiment surges and sends automated alerts with summary + CSV attachment.
+  Detects negative sentiment surges and sends automated alerts with a summary + CSV attachment.
 
 ---
 
