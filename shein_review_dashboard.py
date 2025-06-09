@@ -22,7 +22,7 @@ with col1:
     st.image("shein_logo.png", width=100) # Adjust width as needed for inline placement
 
 with col2:
-    st.markdown("## Shein App Review Dashboard by Grace Isiaka")
+    st.markdown("## Shein App Review Dashboard")
 
 st.markdown("Explore customer sentiment, delivery issues, and product perceptions via real user reviews.")
 
@@ -211,13 +211,14 @@ else:
 # --- FOOTER (Place this at the very end of your shein_review_dashboard.py file) ---
 # Add a horizontal line for separation if you like
 st.markdown("---")
+# Line 1: Plain markdown for my credit
 st.markdown(
-    """
-    <div style="font-size: 0.8em; color: grey; text-align: center;">
-    Dashboard by <strong>Grace Isiaka</strong>
-    <br>
-    Shein logo icon used with thanks to  <a href="https://icons8.com/icon/V3r2kWDPwZgQ/shein" target="_blank" style="color: grey; text-decoration: none;">Icons8 under free license.</a>
-    </div>
-    """,
-    unsafe_allow_html=True # Required to render HTML tags like <div> and <a>
+    "<p style='font-size:0.85em; text-align:center; color:grey;'>Dashboard by <strong>Grace Isiaka</strong></p>",
+    unsafe_allow_html=True
+)
+
+# Line 2: Link credit for shein icon
+st.markdown(
+    "<p style='font-size:0.8em; text-align:center; color:grey;'>Shein logo icon used with thanks to <a href='https://icons8.com/icon/V3r2kWDPwZgQ/shein' target='_blank' style='color: grey;'>Icons8</a> under free license.</p>",
+    unsafe_allow_html=True
 )
